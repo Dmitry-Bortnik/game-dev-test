@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ShowHidePasswordDirective } from '../../directives/show-hide-password.directive';
-import { SignInReqI, UserInfoI } from 'src/app/interfaces/auth.interface';
+import { ShowHidePasswordDirective } from '../../../directives/show-hide-password.directive';
+import { SignInReqI, UserInfoI } from 'src/interfaces/auth.interface';
 import { AuthService } from 'src/app/api-services/auth.service';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
-import { NotificationService } from 'src/app/services/notification.service';
-import { UserService } from 'src/app/services/user.service';
+import { NotificationService } from 'src/services/notification.service';
+import { UserService } from 'src/services/user.service';
 
 @Component({
   standalone: true,

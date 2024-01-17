@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NotificationService, Notification, NotificationType } from 'src/app/services/notification.service';
+import { NotificationService, Notification, NotificationType } from 'src/services/notification.service';
 import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({

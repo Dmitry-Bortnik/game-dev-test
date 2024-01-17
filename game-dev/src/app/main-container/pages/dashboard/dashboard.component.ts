@@ -1,9 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NotificationTooltipComponent } from 'src/app/components/notification-tooltip/notification-tooltip.component';
-import { UserInfoI, UserSingleI } from 'src/app/interfaces/auth.interface';
-import { NotificationService, Notification, NotificationType } from 'src/app/services/notification.service';
-import { UserService } from 'src/app/services/user.service';
+import { UserInfoI, UserSingleI } from 'src/interfaces/auth.interface';
+import { NotificationService, Notification, NotificationType } from 'src/services/notification.service';
+import { UserService } from 'src/services/user.service';
 
 @Component({
   standalone: true,

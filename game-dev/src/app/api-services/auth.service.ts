@@ -2,7 +2,7 @@ import { Inject, Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { API_URL } from "src/config/app-config";
-import { SignInReqI, UserInfoI } from "../interfaces/auth.interface";
+import { SignInReqI, UserInfoI } from "../../interfaces/auth.interface";
 
 @Injectable({
     providedIn: 'root',

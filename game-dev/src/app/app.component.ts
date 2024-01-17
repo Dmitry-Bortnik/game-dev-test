@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NotificationService, Notification, NotificationType } from './services/notification.service';
+import { NotificationService, Notification, NotificationType } from '../services/notification.service';
 import { NotificationTooltipComponent } from './components/notification-tooltip/notification-tooltip.component';
 
 @Component({
