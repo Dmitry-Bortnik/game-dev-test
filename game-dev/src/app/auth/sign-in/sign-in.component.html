@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="sign-in">
+        <div class="container-sign-in">
+            <a href="/" class="logo"><img src="/assets/images/logo.svg" alt=""></a>
+            <h1>Добро пожаловать</h1>
+            <p>Авторизуйтесь чтобы продолжить</p>
+            <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+                <div class="input-field">
+                    <div class="label">Логин*</div>
+                    <input type="text" [ngClass]="{'error': (error$ | async) != null}" [formControlName]="'login'">
+                    <div class="error-icon" *ngIf='error$ | async'></div>
+                </div>
+                <div class="input-field">
+                    <div class="label">Пароль*</div>
+                    <input type="text" [ngClass]="{'error': (error$ | async) != null}" [formControlName]="'password'" [appShowHidePassword]="hidePassword">
+                    <div [class.d-none]="hidePassword" class="eye-opened" (click)="onShow($event); hidePassword = !hidePassword"></div>
+                    <div [class.d-none]="!hidePassword" class="eye-closed" (click)="onShow($event); hidePassword = !hidePassword"></div>
+                </div>
+                <div class="sign-controls">
+                    <label class="customCheckbox" for="savePassword">
+                        <input type="checkbox" checked id="savePassword">
+                        <span>Запомнить</span>
+                    </label>
+                    <a href="/forget-password">Забыли пароль?</a>
+                </div>
+                <div class="submit">
+                    <button type="submit" class="btn-primary">Войти</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

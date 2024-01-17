@@ -1,0 +1,27 @@
+
+
+<div class="container">
+    <div class="user-prifile">
+        <div class="user-avatar"><img src="{{userData?.userAvatar}}" alt=""></div>
+        <div class="user-info">
+            <div class="user-name">{{userData?.userName}}</div>
+            <div class="user-id">ID пользователя: <span>{{userData?.userId}}</span></div> 
+        </div>
+    </div>
+
+    <div class="test-message">
+        <form [formGroup]="testForm">
+            <div class="input-field">
+                <div class="label">Сообщение</div>
+                <input type="text" [formControlName]="'message'">
+            </div>
+        </form>
+    </div>
+
+    <div class="btn-list">
+        <button class="btn-error" (click)="showNotification('Сообщение об ошибке', 'error')">Ошибка</button>
+        <button class="btn-warning" (click)="showNotification('Сообщение об ошибке', 'warning')">Предупреждение</button>
+        <button class="btn-success" (click)="showNotification('Сообщение об ошибке', 'success')">Успех</button>
+        <button class="btn-primary" (click)="onSubmitMessage()">Сообщение</button>
+    </div>
+</div>

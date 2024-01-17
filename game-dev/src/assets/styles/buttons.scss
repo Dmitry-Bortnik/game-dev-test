@@ -1,0 +1,63 @@
+.btn-primary {
+    border-radius: 12px;
+    background: var(--blue-brand, #4C54F4);
+    padding: 16px 32px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s;
+    &:hover {
+        background: var(--blue-brand-hover, #4149f0);
+    }
+}
+
+.btn-error {
+    border-radius: 12px;
+    background: var(--blue-error, #FC5A5A);
+    padding: 16px 32px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s;
+    &:hover {
+        background: var(--blue-error-hover, #FC5A5A);
+    }
+}
+
+.btn-warning {
+    border-radius: 12px;
+    background: var(--blue-warning, #FCCA00);
+    padding: 16px 32px;
+    color: #101D2D;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s;
+    &:hover {
+        background: var(--blue-warning-hover, #FCCA00);
+    }
+}
+
+.btn-success {
+    border-radius: 12px;
+    background: var(--blue-warning, #249F5D);
+    padding: 16px 32px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s;
+    &:hover {
+        background: var(--blue-warning-hover, #249F5D);
+    }
+}

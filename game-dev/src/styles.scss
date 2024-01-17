@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import 'assets/styles/buttons.scss';
+@import 'assets/styles/inputs.scss';
+
+:root {
+    --black-brand: #101D2D;
+    --grey-dark: #6F727A;
+    --blue-brand: #4C54F4;
+    --blue-brand-hover: #4149f0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    background: #F9F9F9;
+    margin: 0px;
+}
+
+input, button, textarea {
+    font-family: 'Inter', sans-serif;
+}
+
+.d-none {
+    display: none;
+}
+
+.container {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.eye-closed {
+    background: url(./assets/images/eye-closed.svg) no-repeat center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+.eye-opened {
+    background: url(./assets/images/eye.svg) no-repeat center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
