@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ShowHidePasswordDirective } from '../../../directives/show-hide-password.directive';
 import { SignInReqI, UserInfoI } from 'src/interfaces/auth.interface';
 import { AuthService } from 'src/app/api-services/auth.service';
@@ -14,12 +14,13 @@ import { UserService } from 'src/services/user.service';
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss'],
-  imports: [CommonModule, ReactiveFormsModule, ShowHidePasswordDirective]
+  imports: [CommonModule, ReactiveFormsModule, ShowHidePasswordDirective, FormsModule]
 })
 export class SignInComponent implements OnInit {
   authForm! : FormGroup;
   hidePassword = true;
   error$ = new Subject<string | null>();
+  autocomplite: string = 'on';
 
   constructor(
     private fb: FormBuilder,
@@ -76,6 +77,13 @@ export class SignInComponent implements OnInit {
 
   public onShow = (eve: Event) => {
     eve.stopPropagation();
+  }
+
+  public changeSavePassword = (event: any) => {
+    if (event.target.checked) 
+      this.autocomplite = 'on'
+    else 
+      this.autocomplite = 'off'
   }
 
 }

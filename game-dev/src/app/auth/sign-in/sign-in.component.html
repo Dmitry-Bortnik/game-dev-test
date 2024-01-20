@@ -4,7 +4,7 @@
             <a href="/" class="logo"><img src="/assets/images/logo.svg" alt=""></a>
             <h1>Добро пожаловать</h1>
             <p>Авторизуйтесь чтобы продолжить</p>
-            <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="authForm" (ngSubmit)="onSubmit()" autocomplete={{autocomplite}}>
                 <div class="input-field">
                     <div class="label">Логин*</div>
                     <input type="text" [ngClass]="{'error': (error$ | async) != null}" [formControlName]="'login'">
@@ -17,8 +17,8 @@
                     <div [class.d-none]="!hidePassword" class="eye-closed" (click)="onShow($event); hidePassword = !hidePassword"></div>
                 </div>
                 <div class="sign-controls">
-                    <label class="customCheckbox" for="savePassword">
-                        <input type="checkbox" checked id="savePassword">
+                    <label class="customCheckbox" for="changeSavePassword">
+                        <input type="checkbox" checked (change)="changeSavePassword($event)" id="changeSavePassword">
                         <span>Запомнить</span>
                     </label>
                     <a href="/forget-password">Забыли пароль?</a>
